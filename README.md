@@ -1,7 +1,8 @@
 # Water meter for Apator16 build with ESP32 + CC1101 on ESPHome & Home Assistant
+<img src="/images/Apator_AT-WMBUS-16-2a.jpg" alt="Apator AT-WMBUS-16-2a" style="width:50%; height:auto;">
 
 Used library:
-https://github.com/SzczepanLeon/esphome-components/
+https://github.com/SzczepanLeon/esphome-components/  
 You can find there detailed explanation of the CC1101 and other modules.
 
 Tested on:
@@ -77,8 +78,10 @@ button:
 
 wmbus_meter:
   - id: cold_water_meter
+    #you can find fumber of your meter on label
     meter_id: "0xXXXXXXX"
     type: apator162
+    #9x% of meters have this key. In some case you need to ask your water supplier
     key: "00000000000000000000000000000000"
     on_telegram:
       - logger.log:
