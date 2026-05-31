@@ -15,7 +15,7 @@ Tested on:
 * SzczepanLeon/esphome-components for CC1101 5.1.6
 
 ## Pinout for 
-<img src="/images/CC1101-868mhz-radio-module-pinout.jpg" alt="CC1101 pinout" style="width:100%; height:auto;">
+<img src="/images/CC1101-868mhz-radio-module-pinout.jpg" alt="CC1101 pinout" style="width:50%; height:auto;">
 
 
 
