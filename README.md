@@ -143,4 +143,5 @@ time:
 This case is designed specifically for the 38-pin ESP32 (ESP-WROOM-32 with CP2102 USB-C) development board.  
 If needed, you can easily modify the dimensions to fit a different board. This is a fully parametric model—at least, I hope it is! :)
 [https://github.com/palmar125/water-meter-esp32-cc1101/case/ESP32_case_v2.f3d](https://github.com/palmar125/water-meter-esp32-cc1101/blob/main/case/ESP32_case_v2.f3d)
+You can find STLs on: https://www.printables.com/model/1740701-esp32-cc1101-case
 
