@@ -1,6 +1,8 @@
 # Water meter for Apator16 build with ESP32 + CC1101 on ESPHome & Home Assistant
 <img src="/images/Apator_AT-WMBUS-16-2a.jpg" alt="Apator AT-WMBUS-16-2a" style="width:50%; height:auto;">
 
+<img src="/images/20260529_083235.jpg" alt="ESP32 + CC1101" style="width:50%; height:auto;">
+
 Used library:
 https://github.com/SzczepanLeon/esphome-components/  
 You can find there detailed explanation of the CC1101 and other modules.
@@ -11,10 +13,13 @@ Tested on:
 * Home Assistant 2026.5.1
 * ESPHome  2026.5.1
 * SzczepanLeon/esphome-components for CC1101 5.1.6
-* 
+
+## Pinout for 
+<img src="/images/CC1101-868mhz-radio-module-pinout.jpg" alt="CC1101 pinout" style="width:100%; height:auto;">
 
 
-# Example config file for ESP HOME: water-meter.yaml
+
+## Example config file for ESP HOME: water-meter.yaml
 ```yaml
 esphome:
   name: water-meter
@@ -134,6 +139,8 @@ time:
   - platform: homeassistant
 ```
 
-# Case for module
-
+## Case for module
+This case is designed specifically for the 38-pin ESP32 (ESP-WROOM-32 with CP2102 USB-C) development board.  
+If needed, you can easily modify the dimensions to fit a different board. This is a fully parametric model—at least, I hope it is! :)
+[https://github.com/palmar125/water-meter-esp32-cc1101/case/ESP32_case_v2.f3d](https://github.com/palmar125/water-meter-esp32-cc1101/blob/main/case/ESP32_case_v2.f3d)
 
