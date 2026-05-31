@@ -72,6 +72,7 @@ wmbus_radio:
   radio_type: CC1101
   cs_pin: GPIO23
   irq_pin: GPIO21
+  #Interrupt pin (GDO0)
   #gdo0_pin: GPIO21
   #gdo2_pin: GPIO22
   
