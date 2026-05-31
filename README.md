@@ -21,9 +21,13 @@ Tested on:
 
 ## Example config file for ESP HOME: water-meter.yaml
 ```yaml
+substitutions:
+  name: "water-meter"
+  friendly_name: "Water meter"
+
 esphome:
-  name: water-meter
-  friendly_name: Water meter
+  name: "${name}"
+  friendly_name: "${friendly_name}"
 
 esp32:
   board: esp32dev
@@ -58,7 +62,7 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Water-Meter Fallback Hotspot"
+    ssid: "${friendly_name}  Fallback Hotspot"
     password: "xxx"
 
 captive_portal:
@@ -135,6 +139,24 @@ sensor:
     name: Garden water Meter RSSI
     unit_of_measurement: "dBm"
     entity_category: "diagnostic"
+
+  - platform: wifi_signal
+    name: "${friendly_name} WiFi Signal Strength"
+    update_interval: 60s
+  - platform: uptime
+    name: "${friendly_name} Uptime"
+    
+binary_sensor:   
+  - platform: status
+    name: "${friendly_name} Status"
+
+switch:
+  - platform: restart
+    name: "${friendly_name} Restart"
+    
+text_sensor:
+  - platform: version
+    name: "${friendly_name} ESPHome Version"
 
 time:
   - platform: homeassistant
