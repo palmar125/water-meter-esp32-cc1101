@@ -151,3 +151,5 @@ You can find STLs on: https://www.printables.com/model/1740701-esp32-cc1101-case
 <img src="/images/20260531_102400.jpg" alt="Case" style="width:50%; height:auto;">
 <img src="/images/20260531_102725.jpg" alt="Case" style="width:50%; height:auto;">
 
+## ESPHome & Home Assistant
+Here you will find some brief how-to: https://esphome.io/guides/getting_started_hassio/
