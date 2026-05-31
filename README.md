@@ -145,3 +145,9 @@ If needed, you can easily modify the dimensions to fit a different board. This i
 [https://github.com/palmar125/water-meter-esp32-cc1101/case/ESP32_case_v2.f3d](https://github.com/palmar125/water-meter-esp32-cc1101/blob/main/case/ESP32_case_v2.f3d)  
 You can find STLs on: https://www.printables.com/model/1740701-esp32-cc1101-case
 
+<img src="/images/20260531_102027.jpg" alt="Case" style="width:50%; height:auto;">
+<img src="/images/20260531_102101.jpg" alt="Case" style="width:50%; height:auto;">
+<img src="/images/20260531_102112.jpg" alt="Case" style="width:50%; height:auto;">
+<img src="/images/20260531_102400.jpg" alt="Case" style="width:50%; height:auto;">
+<img src="/images/20260531_102725.jpg" alt="Case" style="width:50%; height:auto;">
+
