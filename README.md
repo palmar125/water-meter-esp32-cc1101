@@ -22,6 +22,8 @@ You can find an example of how to connect the ESP to a radio module in the examp
 
 ## Example config file for ESP HOME: water-meter.yaml
 ```yaml
+#replace all XXX/xxx with your specific data
+
 substitutions:
   name: "water-meter"
   friendly_name: "Water meter"
@@ -46,12 +48,13 @@ external_components:
 # Enable logging
 logger:
   id: component_logger
-  level: VERBOSE
+  level: VERBOSE  # change to INFO after initial run
   baud_rate: 115200
 
 # Enable Home Assistant API
 api:
-
+  encryption:
+    key: "xxx"
 
 ota:
   - platform: esphome
