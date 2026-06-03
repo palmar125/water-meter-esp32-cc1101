@@ -180,3 +180,9 @@ You can find STLs on: https://www.printables.com/model/1740701-esp32-cc1101-case
 
 ## ESPHome & Home Assistant
 Here you will find some brief how-to: https://esphome.io/guides/getting_started_hassio/
+
+## Other info
+I found this information on some website. It's old info. I don't know is it relevant or not.  
+"nakładki dostosowane są do godzin pracy inkasentów, co za tym idzie wysyłają dane co ok 30 sekund w godzinach 5:00-17:00, a między 17:00 a 5 - co ok 20-30 minut. Próbując więc skonfigurować wieczorem odczyt można sobie poczekać na pierwszy pakiecik…"  
+"The overlays are tailored to the meter readers' working hours; consequently, they transmit data roughly every 30 seconds between 5:00 AM and 5:00 PM, and every 20–30 minutes between 5:00 PM and 5:00 AM. So, if you're trying to configure the reading in the evening, you might be in for a wait for that first packet..."  
+So... be patient :)
