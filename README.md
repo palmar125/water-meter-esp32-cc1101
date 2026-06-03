@@ -14,7 +14,7 @@ Tested on:
 * ESPHome  2026.5.1
 * SzczepanLeon/esphome-components for CC1101 5.1.6
 
-## Pinout for 
+## Pinout for CC1101 
 <img src="/images/CC1101-868mhz-radio-module-pinout.jpg" alt="CC1101 pinout" style="width:50%; height:auto;">
 
 
