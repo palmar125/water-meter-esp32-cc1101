@@ -1,4 +1,4 @@
-# Water meter for Apator16 build with ESP32 + CC1101 on ESPHome & Home Assistant
+# Water meter for Apator16 built with ESP32 + CC1101 on ESPHome & Home Assistant
 <img src="/images/Apator_AT-WMBUS-16-2a.jpg" alt="Apator AT-WMBUS-16-2a" style="width:50%; height:auto;">
 
 <img src="/images/20260529_083235.jpg" alt="ESP32 + CC1101" style="width:50%; height:auto;">
@@ -15,6 +15,7 @@ Tested on:
 * SzczepanLeon/esphome-components for CC1101 5.1.6
 
 ## Pinout for CC1101 
+You can find an example of how to connect the ESP to a radio module in the example config file. Of course, you can choose totally different pins on the ESP side.
 <img src="/images/CC1101-868mhz-radio-module-pinout.jpg" alt="CC1101 pinout" style="width:50%; height:auto;">
 
 
