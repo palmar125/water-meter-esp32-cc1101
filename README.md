@@ -1,4 +1,4 @@
-# Water meter for Apator16 built with ESP32 + CC1101 on ESPHome & Home Assistant
+# ESPHome Apator16 Water Meter (ESP32 + CC1101)
 <img src="/images/Apator_AT-WMBUS-16-2a.jpg" alt="Apator AT-WMBUS-16-2a" style="width:50%; height:auto;">
 
 <img src="/images/20260529_083235.jpg" alt="ESP32 + CC1101" style="width:50%; height:auto;">
