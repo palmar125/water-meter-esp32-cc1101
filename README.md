@@ -15,7 +15,7 @@ Tested on:
 * SzczepanLeon/esphome-components for CC1101 5.1.6
 
 ## Pinout for CC1101 
-You can find an example of how to connect the ESP to a radio module in the example config file. Of course, you can choose totally different pins on the ESP side.
+You can find an example of how to connect the ESP to a radio module in the example config file. Of course, you can choose totally different pins on the ESP side.  
 <img src="/images/CC1101-868mhz-radio-module-pinout.jpg" alt="CC1101 pinout" style="width:50%; height:auto;">
 
 
