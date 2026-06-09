@@ -46,10 +46,19 @@ external_components:
       - wmbus_meter  
 
 # Enable logging
+# logger:
+#   id: esp_water_meter_logger
+#   level: VERBOSE
+#   baud_rate: 115200
 logger:
-  id: component_logger
-  level: VERBOSE  # change to INFO after initial run
-  baud_rate: 115200
+  id: esp_component_logger
+  level: INFO # Drops the Verbose [V] logs that cause the latency
+  id: "esp_water_meter_logger"
+  logs:
+    wmbus: ERROR       # Suppress low-level driver logs completely
+    wmbus_radio: ERROR # Prevents the logging loop from choking the SPI bus
+    cc1101: ERROR
+
 
 # Enable Home Assistant API
 api:
@@ -71,18 +80,31 @@ wifi:
 
 captive_portal:
 
+# Match the Standard ESP32 Hardware SPI PinsThe standard ESP32 must use its VSPI pins 
+# to achieve the speeds necessary to empty the CC1101's internal memory buffer before it overflows.
+# Ensure your physical connections match exactly:MOSI: GPIO 23MISO: GPIO 19CLK: GPIO 18CS: GPIO 5
+# Avoid using GPIOs 6–11 (they connect directly to the integrated SPI flash memory and will crash the board).
+
 spi:
-  mosi_pin: GPIO32
-  clk_pin: GPIO33
+  mosi_pin: GPIO23
+  clk_pin: GPIO18
   miso_pin: GPIO19
+  # mosi_pin: GPIO32
+  # clk_pin: GPIO33
+  # miso_pin: GPIO19
+
 
 wmbus_radio:  
   radio_type: CC1101
-  cs_pin: GPIO23
-  irq_pin: GPIO21
-  #Interrupt pin (GDO0)
+  cs_pin: GPIO05
+  irq_pin: GPIO04
+  # cs_pin: GPIO23
+  # irq_pin: GPIO21
   #gdo0_pin: GPIO21
   #gdo2_pin: GPIO22
+  frequency: 868.95MHz   # Optional. Range: 300–928 MHz. Default: 868.95 MHz
+  # Force strict sync word matching to ignore random background static
+  sync_mode: NORMAL 
   
 
 
