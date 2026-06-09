@@ -208,11 +208,11 @@ Here you will find some brief how-to: https://esphome.io/guides/getting_started_
 The standard ESP32 must use its VSPI pins to achieve the speeds necessary to empty the CC1101's internal memory buffer before it overflows.  
 Ensure your physical connections match exactly:MOSI: GPIO 23, MISO: GPIO 19, CLK: GPIO 18, CS: GPIO 5  
 Avoid using GPIOs 6–11 (they connect directly to the integrated SPI flash memory and will crash the board).
-* Reduce the Logging Level (Critical)
+* Reduce the Logging Level (Critical)  
 The continuous output of [V] (Verbose) level logs like [packet:073][radio_recv]: expected_size creates an intense serial transmission delay. Printing these text strings via the serial interface blocks the core microcontroller loops, allowing the CC1101's tiny buffer to immediately overflow.Change your logger component definition to DEBUG or INFO, and specifically silence the wM-Bus component logs
-
-## Other info
-I found this information on some website. It's old info. I don't know is it relevant or not.  
+* Ensure Stable Power  
+Falsely triggered packets and timeouts often happen when the ESP32's 3.3V voltage regulator dips slightly during Wi-Fi transmissions.Solder a small 10µF to 100µF electrolytic capacitor directly across the VCC and GND pins on the CC1101 module itself. This smooths out voltage ripples and prevents the radio from generating ghost interrupts.
+* I found this information on some website. It's old info. I don't know is it relevant or not.  
 "nakładki dostosowane są do godzin pracy inkasentów, co za tym idzie wysyłają dane co ok 30 sekund w godzinach 5:00-17:00, a między 17:00 a 5 - co ok 20-30 minut. Próbując więc skonfigurować wieczorem odczyt można sobie poczekać na pierwszy pakiecik…"  
 "The overlays are tailored to the meter readers' working hours; consequently, they transmit data roughly every 30 seconds between 5:00 AM and 5:00 PM, and every 20–30 minutes between 5:00 PM and 5:00 AM. So, if you're trying to configure the reading in the evening, you might be in for a wait for that first packet..."  
 So... be patient :)
