@@ -82,7 +82,7 @@ captive_portal:
 
 # Match the Standard ESP32 Hardware SPI PinsThe standard ESP32 must use its VSPI pins 
 # to achieve the speeds necessary to empty the CC1101's internal memory buffer before it overflows.
-# Ensure your physical connections match exactly:MOSI: GPIO 23MISO: GPIO 19CLK: GPIO 18CS: GPIO 5
+# Ensure your physical connections match exactly:MOSI: GPIO 23, MISO: GPIO 19, CLK: GPIO 18, CS: GPIO 5
 # Avoid using GPIOs 6–11 (they connect directly to the integrated SPI flash memory and will crash the board).
 
 spi:
@@ -202,6 +202,14 @@ You can find STLs on: https://www.printables.com/model/1740701-esp32-cc1101-case
 
 ## ESPHome & Home Assistant
 Here you will find some brief how-to: https://esphome.io/guides/getting_started_hassio/
+
+## Problems
+* Match the Standard ESP32 Hardware SPI Pins.  
+The standard ESP32 must use its VSPI pins to achieve the speeds necessary to empty the CC1101's internal memory buffer before it overflows.  
+Ensure your physical connections match exactly:MOSI: GPIO 23, MISO: GPIO 19, CLK: GPIO 18, CS: GPIO 5  
+Avoid using GPIOs 6–11 (they connect directly to the integrated SPI flash memory and will crash the board).
+* Reduce the Logging Level (Critical)
+The continuous output of [V] (Verbose) level logs like [packet:073][radio_recv]: expected_size creates an intense serial transmission delay. Printing these text strings via the serial interface blocks the core microcontroller loops, allowing the CC1101's tiny buffer to immediately overflow.Change your logger component definition to DEBUG or INFO, and specifically silence the wM-Bus component logs
 
 ## Other info
 I found this information on some website. It's old info. I don't know is it relevant or not.  
