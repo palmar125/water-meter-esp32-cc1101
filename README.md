@@ -2,6 +2,7 @@
 <img src="/images/Apator_AT-WMBUS-16-2a.jpg" alt="Apator AT-WMBUS-16-2a" style="width:50%; height:auto;">
 
 <img src="/images/20260529_083235.jpg" alt="ESP32 + CC1101" style="width:50%; height:auto;">
+<img src="/images/esp32_water_meter_capacitor.png" alt="ESP32 + CC1101 + capacitor" style="width:50%; height:auto;">
 
 Used library:
 https://github.com/SzczepanLeon/esphome-components/  
