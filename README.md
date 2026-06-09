@@ -98,16 +98,10 @@ spi:
 wmbus_radio:  
   radio_type: CC1101
   cs_pin: GPIO05
-  irq_pin: GPIO04
-  # cs_pin: GPIO23
-  # irq_pin: GPIO21
-  #gdo0_pin: GPIO21
-  #gdo2_pin: GPIO22
+  irq_pin: GPIO04 #gdo0_pin
   frequency: 868.95MHz   # Optional. Range: 300–928 MHz. Default: 868.95 MHz
   # Force strict sync word matching to ignore random background static
   sync_mode: NORMAL 
-  
-
 
 button:
   - platform: restart
