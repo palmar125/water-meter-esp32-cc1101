@@ -1,5 +1,6 @@
 # ESPHome Apator16 Water Meter (ESP32 + CC1101)
 ![Apator AT-WMBUS-16-2a](/images/Apator_AT-WMBUS-16-2a.jpg)
+<img src="/water-meter-esp32-cc1101/images/Apator_AT-WMBUS-16-2a.jpg" alt="Apator AT-WMBUS-16-2a" style="width:50%; height:auto;">
 <img src="/images/Apator_AT-WMBUS-16-2a.jpg" alt="Apator AT-WMBUS-16-2a" style="width:50%; height:auto;">
 
 <img src="/images/20260529_083235.jpg" alt="ESP32 + CC1101" style="width:50%; height:auto;">
